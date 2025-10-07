@@ -1,0 +1,281 @@
+/**
+ * ShopOS WooCommerce Manager - Admin Styles
+ *
+ * @package ShopOS_WooCommerce_Manager
+ * @version 1.0.0
+ */
+
+/* General Admin Styles */
+.shopos-dashboard,
+.shopos-orders,
+.shopos-analytics,
+.shopos-settings {
+	padding: 20px;
+}
+
+/* Welcome Panel */
+.shopos-welcome-panel {
+	background: #fff;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	padding: 20px;
+	margin: 20px 0;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.shopos-welcome-panel h2 {
+	margin-top: 0;
+	color: #2271b1;
+	font-size: 24px;
+}
+
+.shopos-welcome-panel p {
+	font-size: 14px;
+	color: #646970;
+	line-height: 1.6;
+}
+
+/* Stats Grid */
+.shopos-stats-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	gap: 20px;
+	margin: 20px 0;
+}
+
+.shopos-stat-card {
+	background: #fff;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	padding: 20px;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+	transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.shopos-stat-card:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.shopos-stat-card h3 {
+	margin: 0 0 10px 0;
+	font-size: 14px;
+	color: #646970;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+}
+
+.shopos-stat-value {
+	font-size: 32px;
+	font-weight: bold;
+	color: #2271b1;
+	margin: 0;
+}
+
+/* Quick Links */
+.shopos-quick-links {
+	background: #fff;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	padding: 20px;
+	margin: 20px 0;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.shopos-quick-links h2 {
+	margin-top: 0;
+	font-size: 20px;
+	color: #1d2327;
+}
+
+.shopos-quick-links ul {
+	list-style: none;
+	padding: 0;
+	margin: 10px 0 0 0;
+}
+
+.shopos-quick-links li {
+	margin: 10px 0;
+}
+
+.shopos-quick-links a {
+	display: inline-block;
+	padding: 10px 15px;
+	background: #2271b1;
+	color: #fff;
+	text-decoration: none;
+	border-radius: 3px;
+	transition: background 0.2s;
+}
+
+.shopos-quick-links a:hover {
+	background: #135e96;
+	color: #fff;
+}
+
+/* Orders Container */
+.shopos-orders-container,
+.shopos-analytics-container {
+	background: #fff;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	padding: 20px;
+	margin: 20px 0;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.shopos-orders-table {
+	margin: 20px 0;
+}
+
+/* Settings Form */
+.shopos-settings .form-table {
+	margin-top: 20px;
+}
+
+.shopos-settings .form-table th {
+	padding: 20px 10px 20px 0;
+	vertical-align: top;
+}
+
+.shopos-settings .form-table td {
+	padding: 15px 10px;
+}
+
+.shopos-settings input[type="checkbox"] {
+	margin-right: 5px;
+}
+
+.shopos-settings input[type="number"] {
+	width: 100px;
+}
+
+.shopos-settings .description {
+	color: #646970;
+	font-style: italic;
+	margin-top: 5px;
+}
+
+/* Loading Spinner */
+.shopos-loading {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	border: 3px solid rgba(0, 0, 0, 0.1);
+	border-radius: 50%;
+	border-top-color: #2271b1;
+	animation: shopos-spin 1s linear infinite;
+}
+
+@keyframes shopos-spin {
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+/* Notices */
+.shopos-notice {
+	padding: 10px 15px;
+	margin: 15px 0;
+	border-radius: 3px;
+}
+
+.shopos-notice.success {
+	background: #d4edda;
+	border-left: 4px solid #28a745;
+	color: #155724;
+}
+
+.shopos-notice.error {
+	background: #f8d7da;
+	border-left: 4px solid #dc3545;
+	color: #721c24;
+}
+
+.shopos-notice.info {
+	background: #d1ecf1;
+	border-left: 4px solid #17a2b8;
+	color: #0c5460;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 782px) {
+	.shopos-stats-grid {
+		grid-template-columns: 1fr;
+	}
+	
+	.shopos-stat-card {
+		margin-bottom: 10px;
+	}
+	
+	.shopos-welcome-panel,
+	.shopos-orders-container,
+	.shopos-analytics-container,
+	.shopos-quick-links {
+		padding: 15px;
+	}
+}
+
+/* Buttons */
+.shopos-button {
+	display: inline-block;
+	padding: 8px 15px;
+	background: #2271b1;
+	color: #fff;
+	border: none;
+	border-radius: 3px;
+	cursor: pointer;
+	text-decoration: none;
+	transition: background 0.2s;
+}
+
+.shopos-button:hover {
+	background: #135e96;
+	color: #fff;
+}
+
+.shopos-button:disabled {
+	background: #ccc;
+	cursor: not-allowed;
+}
+
+.shopos-button.secondary {
+	background: #ddd;
+	color: #333;
+}
+
+.shopos-button.secondary:hover {
+	background: #ccc;
+	color: #333;
+}
+
+/* Tables */
+.shopos-table {
+	width: 100%;
+	border-collapse: collapse;
+	background: #fff;
+}
+
+.shopos-table th,
+.shopos-table td {
+	padding: 12px;
+	text-align: left;
+	border-bottom: 1px solid #ddd;
+}
+
+.shopos-table th {
+	background: #f9f9f9;
+	font-weight: 600;
+	color: #1d2327;
+}
+
+.shopos-table tr:hover {
+	background: #f9f9f9;
+}
+
+/* Charts (placeholder for future implementation) */
+.shopos-charts {
+	min-height: 300px;
+	padding: 20px;
+	text-align: center;
+}
